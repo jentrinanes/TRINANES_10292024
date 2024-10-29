@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Item_1",
+        "category": "B",
+        "value": 46
+    },
+    {
+        "id": 2,
+        "name": "Item_2",
+        "category": "A",
+        "value": 69
+    },
+    {
+        "id": 3,
+        "name": "Item_3",
+        "category": "B",
+        "value": 43
+    },
+    {
+        "id": 4,
+        "name": "Item_4",
+        "category": "A",
+        "value": 49
+    },
+    {
+        "id": 5,
+        "name": "Item_5",
+        "category": "B",
+        "value": 87
+    },
+    {
+        "id": 6,
+        "name": "Item_6",
+        "category": "A",
+        "value": 32
+    },
+    {
+        "id": 7,
+        "name": "Item_7",
+        "category": "B",
+        "value": 76
+    },
+    {
+        "id": 8,
+        "name": "Item_8",
+        "category": "A",
+        "value": 83
+    },
+    {
+        "id": 9,
+        "name": "Item_9",
+        "category": "B",
+        "value": 71
+    },
+    {
+        "id": 10,
+        "name": "Item_10",
+        "category": "A",
+        "value": 57
+    }
+]

@@ -3,12 +3,12 @@
     public class ApiKeyMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly string _apiKey;
+        private readonly IConfiguration _configuration;
 
-        public ApiKeyMiddleware(RequestDelegate next, string apiKey)
+        public ApiKeyMiddleware(RequestDelegate next, IConfiguration configuration)
         {
             _next = next;
-            _apiKey = apiKey;
+            _configuration = configuration;
         }
 
         public async Task Invoke(HttpContext context)
@@ -20,8 +20,8 @@
                 return;
             }
 
-            var apiKey = extractedApiKey.FirstOrDefault();
-            if (!apiKey.Equals(_apiKey))
+            var apiKey = _configuration.GetSection("ApiKey").Value;
+            if (!apiKey.Equals(extractedApiKey))
             {
                 context.Response.StatusCode = 401;
                 await context.Response.WriteAsync("API Key is invalid");

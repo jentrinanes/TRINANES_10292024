@@ -16,7 +16,13 @@ namespace FileProcessor.API.Controllers
             _logger = logger;            
         }
 
-        [HttpPost]
+        [HttpGet("filecount")]
+        public IActionResult GetFileCount()
+        {
+            return Ok(_fileCounter);
+        }
+
+        [HttpPost("upload")]
         public async Task<IActionResult> ProcessFile(IFormFile file)
         {
             if (file == null)
