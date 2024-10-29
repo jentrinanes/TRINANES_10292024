@@ -23,7 +23,7 @@ namespace FileProcessor.API.Controllers
         [HttpGet("filecount")]
         public IActionResult GetFileCount()
         {
-            return Ok(_fileCounter);
+            return Ok($"filesProcessed: {_fileCounter}");
         }
 
         /// <summary>
